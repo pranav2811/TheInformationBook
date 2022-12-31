@@ -47,6 +47,7 @@ public class CountriesActivity extends AppCompatActivity {
                         break;
                     case 3:
                         tab.setText("India");
+                        break;
                 }
 
 

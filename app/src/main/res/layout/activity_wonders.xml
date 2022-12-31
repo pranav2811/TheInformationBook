@@ -6,12 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".activities.WondersActivity">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wonders"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="281dp" />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutWonders"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#03A9F4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorColor="#FF0000"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="#FFFFFF" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerWonders"
+        android:layout_width="414dp"
+        android:layout_height="608dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayoutWonders"
+        app:layout_constraintVertical_bias="0.941" />
 </androidx.constraintlayout.widget.ConstraintLayout>
