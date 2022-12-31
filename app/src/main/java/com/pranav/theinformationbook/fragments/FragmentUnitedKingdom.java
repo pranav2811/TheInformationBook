@@ -18,6 +18,10 @@ import com.squareup.picasso.Picasso;
 
 public class FragmentUnitedKingdom extends Fragment {
 
+
+    public static FragmentUnitedKingdom newInstance(){
+        return new FragmentUnitedKingdom();
+    }
     private ImageView imageViewUnitedKingdom;
     private ProgressBar progressBarUnitedKingdom;
 
