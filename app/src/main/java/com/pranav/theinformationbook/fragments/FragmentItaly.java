@@ -16,15 +16,14 @@ import com.pranav.theinformationbook.R;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
-public class FragmentFrance extends Fragment {
+public class FragmentItaly extends Fragment {
 
 
-    public static FragmentFrance newInstance(){
-
-        return new FragmentFrance();
+    public static FragmentItaly newInstance(){
+        return new FragmentItaly();
     }
-    private ImageView imageViewFrance;
-    private ProgressBar progressBarFrance;
+    private ImageView imageViewItaly;
+    private ProgressBar progressBarItaly;
 
     @Nullable
     @Override
@@ -33,25 +32,25 @@ public class FragmentFrance extends Fragment {
         //ViewGroup represents the activity to which well bind our activity
         //bundle states whether we can create it from any situation we saved before
 
-        View view = inflater.inflate(R.layout.fragment_france, container,false);
+        View view = inflater.inflate(R.layout.fragment_italy, container,false);
 
-        imageViewFrance = view.findViewById(R.id.imageViewFrance);
-        progressBarFrance = view.findViewById(R.id.progressBarFrance);
+        imageViewItaly = view.findViewById(R.id.imageViewItaly);
+        progressBarItaly = view.findViewById(R.id.progressBarItaly);
         //we need to create an instance from this class using which well be able to use our instance in the view page adapter
 
         //using picasso we can load the images from the web using their image address
-        Picasso.get().load("https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France" +
-                        ".svg/188px-Flag_of_France.svg.png")
-                .into(imageViewFrance, new Callback() {
+        Picasso.get().load("https://upload.wikimedia.org/wikipedia/en/thumb/0/03/" +
+                        "Flag_of_Italy.svg/188px-Flag_of_Italy.svg.png")
+                .into(imageViewItaly, new Callback() {
                     @Override
                     public void onSuccess() {
-                        progressBarFrance.setVisibility(View.INVISIBLE);
+                        progressBarItaly.setVisibility(View.INVISIBLE);
                     }
 
                     @Override
                     public void onError(Exception e) {
                         Toast.makeText(getActivity(),e.getLocalizedMessage(),Toast.LENGTH_LONG).show();
-                        progressBarFrance.setVisibility(View.INVISIBLE);
+                        progressBarItaly.setVisibility(View.INVISIBLE);
 
 
                     }
