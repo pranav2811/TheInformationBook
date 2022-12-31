@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import com.pranav.theinformationbook.fragments.FragmentFrance;
 import com.pranav.theinformationbook.fragments.FragmentUnitedKingdom;
 
 public class ViewPagerAdapterCountries extends FragmentStateAdapter {
@@ -23,6 +24,9 @@ public class ViewPagerAdapterCountries extends FragmentStateAdapter {
         {
             case 0:
                 fragment = FragmentUnitedKingdom.newInstance();
+                break;
+            case 1:
+                fragment = FragmentFrance.newInstance();
                 break;
             default:
                 return null;
